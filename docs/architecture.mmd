@@ -1,0 +1,23 @@
+flowchart LR
+  subgraph T1[Task 1 · Make.com]
+    S[Manual / scheduled trigger] --> C[Generate synthetic contact]
+    C --> A[Airtable Contacts]
+    A --> O[OpenAI company summary]
+    O --> D[Google Docs report]
+    D --> AU[Update Airtable with summary and URL]
+    DS[Daily schedule · 07:00 chosen timezone] --> Q[Query completed contacts]
+    Q --> SR[Slack daily digest]
+  end
+  subgraph T2[Task 2 · Python]
+    I[Video URL or search keyword] --> Y[YouTube Data API v3]
+    Y --> N[Validate and normalize metadata]
+    N --> CSV[CSV output]
+    N --> GS[Optional Google Sheets append]
+  end
+  subgraph T3[Task 3 · Webhook]
+    W[JSON + secret header] --> V[Flask validation]
+    V --> SL[Slack chat.postMessage]
+  end
+  NOTE[External credentials and tenant configuration required] -.-> T1
+  NOTE -.-> T2
+  NOTE -.-> T3
