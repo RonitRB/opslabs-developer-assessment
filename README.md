@@ -1,0 +1,31 @@
+# OpsLabs Developer Assessment
+
+Production-oriented reference implementation for the three assessment workflows: contact enrichment and reporting, YouTube metadata collection, and a Slack incoming webhook.
+
+## What is included
+
+- `task1_make_automation/`: tenant-neutral Make.com workflow specification, Airtable schema, and report template. It is not a native Make export.
+- `task2_youtube_scraper/`: validated YouTube Data API v3 scraper, CSV export, optional Google Sheets append, retry/backoff, and CLI.
+- `task3_slack_bot/`: authenticated-by-secret HTTP webhook receiver which validates and formats weekly metrics for Slack.
+- `shared/`: environment configuration and structured logging helpers.
+- `docs/`: project requirements, architecture, schemas, deployment/runbooks, testing plan, decisions, and known limitations.
+
+## Quick start
+
+1. Python 3.11+ recommended. Create a virtual environment and install `requirements.txt`.
+2. Copy `.env.example` to `.env`; set only the credentials for integrations you will use. Never commit `.env`.
+3. Task 2: `python -m task2_youtube_scraper.scraper --query "python automation" --max-results 10 --csv task2_youtube_scraper/output.csv` (requires `YOUTUBE_API_KEY`). For a video URL, replace `--query` with `--url URL`.
+4. Task 3: `python -m task3_slack_bot.slack_bot` then POST `task3_slack_bot/webhook_example.json` to `http://localhost:8000/webhook/weekly-report` with `X-Webhook-Secret` set to `WEBHOOK_SECRET`.
+5. Task 1: recreate the flow in Make.com using `task1_make_automation/make_blueprint.json` as a specification, then complete the connection-specific configuration steps in its README and `docs/09-AUTOMATION-FLOWS.md`.
+
+## External service setup
+
+Live Airtable, OpenAI, Google Docs/Sheets, Make.com scheduling, and private Slack channel delivery require user-owned accounts, OAuth/API credentials, and workspace-specific IDs. This package provides implementation and importable/configurable assets; it does not claim those external scenarios are deployed or connected. Configure secrets via environment variables and Make connections, never by embedding credentials in blueprints.
+
+## Validation and operational notes
+
+The scraper uses the official YouTube Data API; it does not scrape YouTube HTML. API quota, Google OAuth scopes, Make operation limits, retention, and Slack channel permissions apply. See [docs/13-DEPLOYMENT.md](docs/13-DEPLOYMENT.md) and [docs/12-TESTING.md](docs/12-TESTING.md).
+
+Offline tests: `.venv\Scripts\python.exe -m unittest discover -s tests -v`. This validates parsing, CSV formatting, payload validation, and error responses without live credentials. It does not verify third-party delivery.
+
+Architecture: [docs/architecture.mmd](docs/architecture.mmd). Screenshots and Loom recording are not included until a live integration run can be captured.
