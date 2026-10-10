@@ -1,6 +1,6 @@
 # Task 1 — Contact enrichment automation
 
-This directory holds a Make.com scenario design, Airtable field contract, Google Docs template, and operator notes. The JSON is a portable workflow specification; Make exports are tenant-specific and depend on module versions and connection IDs, so validate/remap its steps in your Make organization before activation. Task 1 uses Groq as its LLM provider.
+This directory contains the exported Make.com Task 1 blueprint, Airtable field contract, Google Docs template, and operator notes. The blueprint has five modules: Airtable create, Groq summary, Google Docs create, Airtable update, and Slack report. After importing, reconnect your own service connections and confirm the Airtable base/table, Docs folder, Slack destination, and schedule before activation. Task 1 uses Groq as its LLM provider.
 
 ## Required scenarios
 
@@ -9,7 +9,7 @@ This directory holds a Make.com scenario design, Airtable field contract, Google
 
 `airtable_schema.json` defines the required table. `company_report_template.md` is the content template to reproduce in Google Docs. Keep the Groq prompt grounded in the provided company name and instruct it to label unknown facts rather than invent them.
 
-For local components that call an LLM, configure `LLM_PROVIDER=groq` and `GROQ_API_KEY` in the untracked `.env`. In Make, create a Groq connection or an authenticated HTTP connection using a Make-managed secret. The included JSON is a design specification and does not contain credentials or connection IDs.
+For local components that call an LLM, configure `LLM_PROVIDER=groq` and `GROQ_API_KEY` in the untracked `.env`. In Make, reconnect the Groq module using a Make-managed connection. The exported blueprint contains module configuration but no API keys; service connection IDs and resource references may need remapping in your Make organization. Never add a Slack webhook URL, API key, or service credential to the public repository.
 
 ## Activation checklist
 
