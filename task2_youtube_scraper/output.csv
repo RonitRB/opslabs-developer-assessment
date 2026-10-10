@@ -1,0 +1,356 @@
+﻿title,channel,description,publish_date,views,url
+Automate with Python – Full Course for Beginners,freeCodeCamp.org,"Learn how to automate your life with Python! You will learn how to automate boring and repetitive tasks such as creating an Excel report, sending text messages, extracting tables from websites, interacting with websites, and more. You will learn how to use a few different Python libraries to help with automation such as Path, Selenium, XPath, and more.
+
+💻 Source Code & Datasets: https://github.com/ifrankandrade/automation
+
+✏️ Course from Frank Andrade. Check out his YouTube Channel: https://www.youtube.com/c/FrankAndrade5
+🔗 Automation Cheat Sheet: https://artificialcorner.com/p/redeem-my-udemy-courses-for-free
+🔗 Frank's 11-Hour Automation Course in Python: https://www.udemy.com/course/automate-your-life-with-python/?referralCode=7FA8B361D7A92B03A8C3
+🔗 Frank's Discord Server: https://discord.gg/6xyQaj8bJK
+
+❤️ Try interactive Python courses we love, right in your browser: https://scrimba.com/freeCodeCamp-Python (Made possible by a grant from our friends at Scrimba)
+
+⭐️ Course Contents ⭐️
+⌨️ (0:00:00) Intro
+⌨️ (0:00:31) Project #1 Table Extraction - Extract Tables from Websites
+⌨️ (0:02:53) Table Extraction - Extract CSV Files from Websites
+⌨️ (0:09:38) Table Extraction - Extract Tables from PDFs
+⌨️ (0:13:06) Project #2 - Web Automation & Web Scraping - HTML Basics - Tags and Elements
+⌨️ (0:20:57) Web Automation & Web Scraping - HTML Basics - Tree Structure
+⌨️ (0:24:22) Web Automation & Web Scraping - XPath - Syntax, Functions and Operators
+⌨️ (0:28:06) Web Automation & Web Scraping - XPath - Test Your XPath
+⌨️ (0:33:38) Web Automation & Web Scraping - XPath - Special Characters and Syntax
+⌨️ (0:38:17) Automate The News - Installing Selenium and ChromeDriver
+⌨️ (0:40:34) Automate The News - Creating The Driver
+⌨️ (0:44:46) Automate The News - Finding Elements
+⌨️ (1:04:34) Automate The News - Exporting Data to a CSV File
+⌨️ (1:12:34) Automate The News - Headless mode
+⌨️ (1:18:18) Automate The News - Preparing Script to Be Run Everyday
+⌨️ (1:30:17) Automate The News - Convert py to exe
+⌨️ (1:37:18) Automate The News - Schedule Python Script with crontab (macOS)
+⌨️ (1:42:16) Project #3 - Automate Excel Report - Create a Pivot Table with Python
+⌨️ (1:49:42) Automate Excel Report - Add a Bar Chart
+⌨️ (2:05:02) Automate Excel Report - Write Excel Formulas with Python
+⌨️ (2:19:18) Automate Excel Report - Format Cells
+⌨️ (2:23:04) Automate Excel Report - Convert Pivot Table to Excel Report
+⌨️ (2:25:32) Automate Excel Report - Generate Excel Reports with One Click (py to exe)
+⌨️ (2:33:22) Project #4 - Automate WhatsApp
+
+🎉 Thanks to our Champion and Sponsor supporters:
+👾 Raymond Odero
+👾 Agustín Kussrow
+👾 aldo ferretti
+👾 Otis Morgan
+👾 DeezMaster
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://freecodecamp.org/news",2022-06-20T15:24:45Z,2038738,https://www.youtube.com/watch?v=PXMJ6FS7llk
+Python Automation Tutorial – How to Automate Tasks for Beginners [Full Course],freeCodeCamp.org,"Learn how to use Python automation to perform common tasks. In this full course you will learn how to build the following automation projects:
+- Hacker News Headlines Emailer 
+- TED Talk Downloader
+- Table Extractor from PDF
+- Automated Bulk Resume Parser
+- Image Type Converter
+- Building an Automated News Summarizer 
+
+💻 Code: https://github.com/amrrs/build_tools_to_automate_python
+
+✏️ Course from 1littlecoder. Check out his channel: https://www.youtube.com/c/1littlecoder
+
+❤️ Try interactive Python courses we love, right in your browser: https://scrimba.com/freeCodeCamp-Python (Made possible by a grant from our friends at Scrimba)
+
+⭐️ Course Contents ⭐️
+⌨️ (0:00:00) Introduction
+⌨️ (0:00:29) Hacker News Headlines Emailer - Tutorial 1
+⌨️ (0:01:13) Introduction to Web Scraping
+⌨️ (0:03:08) Setting up the Environment
+⌨️ (0:06:30) Project Script
+⌨️ (0:11:00) Website Structure of Hacker News FrontPage
+⌨️ (0:21:00) Sending Email from Python
+⌨️ (0:35:15) Building the Headlines Email Module
+⌨️ (0:39:07) TED Talk Downloader - Tutorial 2
+⌨️ (0:39:49) Installation and Introduction to requests package
+⌨️ (0:41:25) Installation and Introduction to BeautifulSoup
+⌨️ (0:43:25) Building the basic script to download the video
+⌨️ (0:49:37) Generalising the Script to get Arguments
+⌨️ (0:53:49) Table Extractor from PDF - Tutorial 3  
+⌨️ (0:54:44) Basics of PDF Format
+⌨️ (0:57:05) Installing required Python Modules
+⌨️ (1:02:16) Extracting Table from PDF
+⌨️ (1:06:51) Quick Introduction to Jupyter Notebook
+⌨️ (1:08:29) PDF Extraction on Jupyter Notebook
+⌨️ (1:15:29) Pandas and Write Table as CSV Excel
+⌨️ (1:21:02) Automated Bulk Resume Parser - Tutorial 4
+⌨️ (1:22:15) Different Formats of Resumes and marking relevant Information
+⌨️ (1:25:50) Project Architecture and Brief Overview of the required packages and installations
+⌨️ (1:34:48) Basics of Regular Expression in Python
+⌨️ (1:41:38) Basic Overview of Spacy Functions
+⌨️ (1:49:55) Extracting Relevant Information from the Resumes
+⌨️ (2:16:46) Completing the script to make it a one-click CLI
+⌨️ (2:28:09) Image Type Converter - Tutorial 5
+⌨️ (2:29:09) Different type of Image Formats
+⌨️ (2:31:33) What is an Image type convertor
+⌨️ (2:33:04) Introduction to Image Manipulation in Python
+⌨️ (2:34:51) Building an Image type converting Script
+⌨️ (2:40:03) Converting the script into a CLI Tool
+⌨️ (2:44:27) Building an Automated News Summarizer - Tutorial 6
+⌨️ (2:46:27) What is Text Summarization
+⌨️ (2:47:46) Installing Gensim and other Python Modules
+⌨️ (2:52:43) Extracting the required News Source
+⌨️ (2:59:38) Building the News Summarizer
+⌨️ (3:07:14) Scheduling the News Summarizer
+⌨️ (3:10:25) Thank you
+
+🎉 Thanks to our Champion and Sponsor supporters:
+👾 Wong Voon jinq
+👾 hexploitation
+👾 Katia Moran
+👾 BlckPhantom
+👾 Nick Raker
+👾 Otis Morgan
+👾 DeezMaster
+👾 AppWrite
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://freecodecamp.org/news",2021-09-21T14:02:17Z,1154368,https://www.youtube.com/watch?v=s8XjEuplx_U
+"Telugu lo Python: Automation - Website Monitoring, Python For Beginners In Telugu, Python In Telugu",SoftwareSchool - Coding Tutorials In Telugu,"python for beginners in telugu, python in telugu, python tutorial telugu, telugu python language, python telugu tutorials, telugu computer world python,  python list in telugu, , python interview questions, telugu lo python, python telugu, python automation, automation with python, automation using python,   python learning telugu, telugu python tutorial, python interview coading questions and answers for freshers in telugu, 
+python interview questions in telugu, python programs for interview telugu, python code for interview telugu, python full cource telugu, python language telugu,  python basics telugu, python for beginners telugu, python telugu computer world, python code for interview telugu, telugu python youtube channel,  python coading in telugu, python video tutorial in telugu, python tutorial it telugu, python tutorial for beginners in telugu, tutorial python telugu, python interview queations telugu, 
+
+ #pythonforbeginnersintelugu #pythonintelugu # python #pythontips
+ #telugupythontutorial #pythonforbeginnerstelugu #pythonfullcourcetelugu #pythonlearningtelugu #pythonlanguagetelugu #pythonlisttelugu 
+#pythontutorialtelugu #tutorialpythontelugu #pythonautomation #telugulopython #pythontelugu 
+
+👨‍💻👩‍💻 Real-time oriented training for Job Seekers 
+
+👉Coding classes in Telugu 
+👉Real-time projects 
+👉Resume building, Interview preparation, Mock interviews 
+👉Call: 9032029072 
+👉WhatsApp us on: https://bit.ly/44p8mpV 
+👉YouTube Channel: https://bit.ly/3PPkewS 
+👉Website(Courses & Syllabus): https://bit.ly/3OaN9dP 
+👉Instagram: https://bit.ly/3pGyT2P
+👉Email: contact@softwareschool.co
+
+SoftwareSchool
+Software School
+Telugu Coding Tutorials
+Coding Tutorials in Telugu",2022-12-24T12:20:30Z,20130,https://www.youtube.com/watch?v=tq2I4i50LRQ
+Build a python automation with me #coding #softwareengineer #developer #python #programming #code,Your Average Tech Bro,"Want to work with me 1:1? Book some time with me at https://www.youraveragetechbro.com
+\n Check out the Content Marketing Blueprint to learn how to market your SaaS product on social media: https://thecontentmarketingblueprint.com/?utm_source=yatb-yt
+
+ Get access to high quality coding projects that actually impress recruiters: https://www.sweprojects.com/
+
+Check out all the gear that I use! https://kit.co/dohyunkim/desk-essentials
+
+Follow me on TikTok: @youravergetechbro",2023-02-22T17:49:29Z,492719,https://www.youtube.com/watch?v=hQC6wYhcHXc
+Python Tutorials For Automation Testing | Python For Beginners,Mukesh otwani,"If you a QA professional looking to improve your testing skills using the power of Python? Then this video is dedicated to providing you with comprehensive and practical Python tutorials tailored specifically for testers like you.
+
+Timestamp for videos.
+1 What Is Python- Python Tutorials For Beginners - 00:00:00:00
+2 How To Download and Install Python On Windows- Python Tutorials For Beginners - 00:07:45:11
+How To Install Python 3 On MAC-Python Tutorials For Beginners - 00:22:04:03
+3 What are the Different Data Type In Python- Python Tutorials For Beginners - 00:36:12:10
+4 String In Python and Different Methods of String- Python Tutorials For Beginners - 00:57:26:21
+5 List In Python- Python Tutorials For Beginners - 01:36:06:14
+6 Set In Python- Python Tutorials For Beginners - 02:03:34:25
+7 Dictionary In Python-Python Tutorials For Beginners - 02:16:18:21
+8 Tuple In Python- Python Tutorials For Beginners - 02:49:19:28
+9 Conditional Statement in Python -If, else, elif nested if- Python Tutorials For Beginners - 03:11:14:12
+10 How To Debug Python Program using PyCharm- Python Tutorials For Beginners - 03:39:47:08
+11 For Loop In Python- Python Tutorials For Beginners - 03:55:26:11
+12 While Loop In Python with Else, Break, Continue And Pass- Python Tutorials For Beginners - 04:28:07:22
+13 Function in Python - Python Tutorials For Beginners - 04:52:06:00
+14- *args and **kwargs in python explained - Python Tutorials For Beginners - 05:23:31:29
+15 Python Documentation- Python Tutorials For Beginners - 05:40:41:15
+16 What is Modules And Packages In Python Detailed Explanation- Python Tutorials For Beginners - 05:46:10:24
+17 How To Create Class ,Objects and Constructor In Python - Python Tutorials For Beginners - 06:14:38:15
+18 Inheritance In Python - Single Level, Multi-Level, Multiple Inheritance In Python With Example - 06:47:44:24
+19 Method Overriding In Python - Polymorphism - Python Tutorials - Python Tutorials For Beginners - 07:14:49:24
+How To Run Python Script In MAC From Terminal - 07:28:31:09
+How To Run Python Script From Command Prompt In Windows- Python Tutorials For Beginners - 07:33:15:22
+20- Constructor With Inheritance In Python- Python Tutorials For Beginners - 07:39:09:14
+21 Exception Handling In Python- Try, Except,Finally,Raise Keyword- Python Tutorials For Beginners - 07:47:17:27
+22- Assert Keyword In Python- How To Perform Assertion In Python-Python Tutorials For Beginners - 08:14:10:04
+23 How To Read and Write Text File In Python-Python Tutorials For Beginners - 08:22:39:12
+Zip Function In Python- How Zip Function Works With List, Set etc- Python Tutorials For Beginners - 08:47:23:08
+Python Lambda Functions Tutorial- What Is Lambda Function | Anonymous Function In Python - 09:02:40:21
+
+Related Keywords
+python for testers, learn python automation, python for qa, python tutorial for beginners, python for selenium testing
+
+Hashtags
+#Python #AutomationTesting #QATutorial #ProgrammingForTesters #QA",2023-08-29T13:27:10Z,75924,https://www.youtube.com/watch?v=LwAwyL9ozDA
+Automate Excel With Python - Python Excel Tutorial (OpenPyXL),Tech With Tim,"The first 1,000 people to click this link will get a free career coaching session courtesy of Career Karma: https://rebrand.ly/tech-with-tim-51321
+
+Welcome to another video! In this video, I will cover how we can use python to automate Excel. I'll be going over everything from creating workbooks to accessing individual cells and stylizing cells. There is a ton of things that you can do with Excel but I'll just be covering the core/base things in OpenPyXl.
+
+📄 Resources 📄
+OpenPyXL Docs: https://openpyxl.readthedocs.io/en/stable/
+Code Written in This Tutorial: https://github.com/techwithtim/ExcelPythonTutorial
+Fix Pip (Windows): https://www.youtube.com/watch?v=AdUZArA-kZw
+Fix Pip (Mac/Linux): https://www.youtube.com/watch?v=E-WhAS6qzsU&t=4s
+
+⭐️ Timestamps ⭐️
+00:00 | Introduction
+02:14 | Installing openpyxl
+03:19 | Testing Installation
+04:25 | Loading an Existing Workbook
+06:46 | Accessing Worksheets
+07:37 | Accessing Cell Values
+08:58 | Saving Workbooks
+09:52 | Creating, Listing and Changing Sheets
+11:50 | Creating a New Workbook
+12:39 | Adding/Appending Rows
+14:26 | Accessing Multiple Cells
+20:46 | Merging Cells
+22:27 | Inserting and Deleting Rows
+23:35 | Inserting and Deleting Columns
+24:48 | Copying and Moving Cells
+26:06 | Practical Example, Formulas & Cell Styling
+
+◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️
+💰 Courses & Merch 💰 
+💻 The Fundamentals of Programming w/ Python: https://tech-with-tim.teachable.com/p/the-fundamentals-of-programming-with-python 
+👕 Merchandise: https://teespring.com/stores/tech-with-tim-merch-shop 
+
+🔗 Social Medias 🔗 
+📸 Instagram: https://www.instagram.com/tech_with_tim 
+📱 Twitter: https://twitter.com/TechWithTimm 
+⭐ Discord: https://discord.gg/twt
+📝 LinkedIn: https://www.linkedin.com/in/tim-ruscica-82631b179/ 
+🌎 Website: https://techwithtim.net 
+📂 GitHub: https://github.com/techwithtim 
+🔊 Podcast: https://anchor.fm/tech-with-tim 
+
+🎬 My YouTube Gear 🎬 
+🎥 Main Camera (EOS Canon 90D): https://amzn.to/3cY23y9 
+🎥 Secondary Camera (Panasonic Lumix G7): https://amzn.to/3fl2iEV 
+📹 Main Lens (EFS 24mm f/2.8): https://amzn.to/2Yuol5r 
+🕹 Tripod: https://amzn.to/3hpSprv 
+🎤 Main Microphone (Rode NT1): https://amzn.to/2HrZxXc
+🎤 Secondary Microphone (Synco Wireless Lapel System): https://amzn.to/3e07Swl 
+🎤 Third Microphone (Rode NTG4+): https://amzn.to/3oi0v8Z
+☀️ Lights: https://amzn.to/2ApeiXr 
+⌨ Keyboard (Daskeyboard 4Q): https://amzn.to/2YpN5vm 
+🖱 Mouse (Logitech MX Master): https://amzn.to/2HsmRDN
+📸 Webcam (Logitech 1080p Pro): https://amzn.to/2B2IXcQ 
+📢 Speaker (Beats Pill): https://amzn.to/2XYc5ef 
+🎧 Headphones (Bose Quiet Comfort 35): https://amzn.to/2MWbl3e 
+🌞 Lamp (BenQ E-reading Lamp): https://amzn.to/3e0UCr8 
+🌞 Secondary Lamp (BenQ Screenbar Plus): https://amzn.to/30Dtafi 
+💻 Monitor (BenQ EX2780Q): https://amzn.to/2HsmUPZ
+💻 Monitor (LG Ultrawide 34WN750): https://amzn.to/3dSD7tS
+🎙 Mic Boom Arm (Rode PSA 1): https://amzn.to/30EZw9m 
+🎚 Audio Interface (Focusrite Scarlet 4i4): https://amzn.to/2TjXsih
+
+💸 Donations 💸 
+💵 One-Time Donations: https://www.paypal.com/donate?hosted_button_id=CU9FV329ADNT8
+💰 Patreon: https://www.patreon.com/techwithtim
+◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️◼️
+
+⭐️ Tags ⭐️
+- Tech With Tim
+- Python
+- Excel
+- Python Tutorial
+- Python and Excel
+- Automating Excel
+
+⭐️ Hashtags ⭐️
+#TechWithTim #PythonExcelTutorial",2021-05-13T15:00:09Z,1767611,https://www.youtube.com/watch?v=7YS6YDQKFh0
+How I Would Learn Python FAST (if I could start over),Sajjaad Khader,"If I had to learn Python again from scratch.. and learn it FAST - this is exactly how I’d do it. 
+
+After teaching myself Python in just two months to survive a research lab, I built a simple 5-level “Python Mastery Pyramid” that takes you from absolute beginner to building real AI and machine learning projects.
+
+#ad Meet the PERFECT AI PC: the Dell Pro Max Tower T2 fueled by the NVIDIA RTX™ PRO 6000 Blackwell GPU with 96GB of GPU memory, for next-gen performance. @DellTech @Dell @nvidia.ai.pc #NVIDIA
+
+___
+
+🚀 JOIN MY TECH COMMUNITY: SWE LAUNCHPAD
+Inside, you'll learn How to break Into tech with practical resources, job prep guidance, and real industry insights you won’t find in school. 
+→ https://swelaunchpad.com
+
+✉️ TECH NEWSLETTER
+Discover the latest tech trends shaping the industry, unlock career tips, and access exclusive resources to stay competitive in tech. 
+→ https://sajjaad.substack.com/
+
+🗣️ INVITE ME TO SPEAK AT YOUR EVENT
+→ https://forms.gle/p38f7Jqt7FjYWtYU7
+
+🧑‍💻 LEARN TO CODE
+Learn to code with bite-sized projects and an AI-bot to help answer your queries. I recommend you start with their python module, then check out java and javascript.
+→ https://coddy.tech/ (It's FREE, but you can use the code SAJYT for 20% off of premium features!)
+
+⬇️ MY OTHER SOCIALS:
+📸 Instagram:    / https://www.instagram.com/sajjaad.khader/
+📱 TikTok:    / https://www.tiktok.com/@sajjaadkhader
+🌍 My website: https://sajjaad-s-site.thinkific.com/...
+
+___
+
+0:00 - How I Learned Python FAST
+0:17 - The 5-Level Python Pyramid
+0:37 - Level 1: Python Fundamentals & Mindset
+2:38 - Level 2: The Perfect Beginner Setup (Use Google Colab)
+3:30 - Best Beginner Resources (30 Days of Python)
+5:15 - Dell Pro Max Tower T2
+6:08 - Level 3: Real-World Projects That Build Skill
+8:16 - Level 4: Python for AI & Machine Learning
+9:03 - How to use AI as a partner
+10:03 - How to use AI as a product
+11:31 - Level 5: Continuous Mastery (Brain Dump Protocol)",2025-11-19T22:01:02Z,730651,https://www.youtube.com/watch?v=mC4nyib2sfg
+How To Become Automation Engineer Using Python | Python For Automation Testing Roadmap,The Testing Academy,"Python course- https://sdet.live/python0x
+Exclusive Launch Fee: ₹7,999
+Use Coupon “PROMODE” To Get ₹2000 OFF during Checkout. (LIVE Batch Starting in Sept)
+
+Are you looking to become a Python automation engineer or tester, but don't know where to start? Look no further than our latest video from The Testing Academy, ""How To Become Python Automation Engineer | Python Automation Tester Roadmap.""
+
+In this video, we provide a detailed roadmap for beginners on how to become a job-ready automation tester with Python. We cover everything from Python basics and tutorials for beginners to professional certificate programs that will set you apart from the competition.
+
+Our expert instructors share insider tips on how to become a successful automation tester with Python, including the essential skills and knowledge you need to excel in this field. We also provide a Python automation tester roadmap that will guide you on your journey towards becoming a test automation engineer.
+
+At The Testing Academy, we understand the importance of keeping up with the latest software testing trends and technologies. That's why we've created this must-watch video for anyone looking to become a Python automation engineer or tester.
+
+So if you're ready to take your skills to the next level and become a job-ready automation tester with Python, be sure to watch this video from The Testing Academy.
+
+🔥 Automation Tester Blueprint - 
+https://sdet.live/Become
+🔥  Roadmap To Become an Automation Tester -
+https://sdet.live/roadmap-automation
+
+We are going to how to become an automation tester in 2022 with Selenium & Java.
+
+🚀 Download Notes - https://sdet.live/notes
+🚀 Watch Full Playlist : https://apitesting.co/30days
+🚀 Download Roadmaps- https://sdet.live/roadmaps
+🚀 BONUS VIDEO 🚀
+
+❤️ Mind Map Download - https://sdet.live/notes
+❤️ Become Better QA : https://sdet.live/30days
+
+✅ Resources for Selenium Training with Custom Framework.
+🔥🔥 https://sdet.live/30dayselenium​
+🔥🔥 https://sdet.live/2WlO​
+
+✅ If you are new consider subscribing and follow day by day to become an Automation Testing expert in 30 days.
+
+🔥 Become Better QA
+✅ 30 Days of Automation Testing Playlist
+✅ 30 Days of Selenium (With Framework)
+✅ 30 Days of API Testing with Postman
+✅ 30 Days of API testing with Rest Assured
+✅ Karate API Testing for Beginners  
+✅ Link to Playlist
+ 👉 https://sdet.live/30days",2023-05-15T06:30:07Z,31809,https://www.youtube.com/watch?v=TuV8DfXpwfk
+How I’m hosting my Python Automation project! 🐍🤖 #coding #programming,Tom Shaw,,2024-03-03T14:27:44Z,27050,https://www.youtube.com/watch?v=4jarshdEWMs
+Automate Daily Tasks with Python & AI | Productivity Hack,Progma Engineer,"Boost your productivity with Python automation and AI-powered tools! In this YouTube Short, I show you how to automate daily use websites workflows using Python scripting and AI automation techniques.
+
+Whether you are a Python beginner, a digital marketer, or a tech enthusiast, this guide helps you save hours every day. Learn task automation with Python, AI task automation, and how to create smart daily routines that run automatically.
+#PythonAutomation #AITools #DailyTaskAutomation #ProductivityHacks #PythonTips #WorkflowAutomation #AI #Automation",2025-10-08T03:30:01Z,25368,https://www.youtube.com/watch?v=a_T2UqM2ySM
