@@ -1,0 +1,35 @@
+{
+  "spec_version": "1.0",
+  "artifact_type": "make_scenario_design",
+  "name": "OpsLabs Task 1 Contact Enrichment and Daily Report",
+  "description": "Tenant-neutral scenario specification. Recreate/remap modules in Make.com; connection IDs are intentionally not embedded.",
+  "timezone": "SET_WORKSPACE_TIMEZONE",
+  "scenarios": [
+    {
+      "name": "Generate and enrich a contact",
+      "trigger": {"kind": "schedule_or_custom_webhook", "schedule": "manual or configured cadence"},
+      "steps": [
+        {"id": "generate_contact", "service": "make_tools", "operation": "generate_random_contact", "outputs": ["name", "email", "company", "idempotency_key"]},
+        {"id": "validate_contact", "service": "filter", "rules": ["name is non-empty", "email is valid", "company is non-empty"]},
+        {"id": "airtable_create", "service": "airtable", "operation": "create_record", "table": "Contacts", "initial_status": "processing", "retry": {"max_attempts": 3, "backoff": "exponential"}},
+        {"id": "company_summary", "service": "groq", "operation": "create_grounded_summary", "provider": "groq", "input": "company", "max_output_tokens": 350, "prompt_rule": "Use only reliable known information; state uncertainty and do not invent details."},
+        {"id": "google_doc", "service": "google_docs", "operation": "create_from_template", "template": "company_report_template.md", "output": "document_url"},
+        {"id": "airtable_update", "service": "airtable", "operation": "update_record", "fields": ["Summary", "Google Doc URL", "Created Date", "Status=complete"]}
+      ],
+      "error_route": {"operation": "log_failure_and_mark_record_failed", "retry_policy": "bounded", "include_secrets": false}
+    },
+    {
+      "name": "Daily company report",
+      "trigger": {"kind": "schedule", "local_time": "07:00", "timezone": "SET_WORKSPACE_TIMEZONE"},
+      "steps": [
+        {"id": "airtable_search", "service": "airtable", "operation": "search_records", "filter": "Created Date within prior digest window AND Status=complete AND Google Doc URL is not empty"},
+        {"id": "aggregate", "service": "make_tools", "operation": "aggregate", "outputs": ["companies_processed", "google_docs_created", "latest_companies"]},
+        {"id": "slack_digest", "service": "slack", "operation": "post_message", "channel": "CONFIGURE_PRIVATE_CHANNEL", "format": "Daily Company Report; counts and latest companies"}
+      ],
+      "error_route": {"operation": "notify_operator", "include_secrets": false}
+    }
+  ],
+  "llm": {"provider": "groq", "credential_env_for_local_tools": "GROQ_API_KEY", "make_connection": "Configure a Groq connection or authenticated HTTP module in Make; keep credentials in Make-managed connections."},
+  "security": {"credentials": "Use Make connections; never store secrets in this file", "data_minimization": true},
+  "limitations": ["This is a tenant-neutral design specification, not a Make.com export. Map operations to current module versions and connection IDs in the target organization.", "Choose timezone and contact-generation policy before activating schedules."]
+}

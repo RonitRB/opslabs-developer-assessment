@@ -1,0 +1,15 @@
+{
+  "base_name": "OpsLabs Assessment",
+  "table_name": "Contacts",
+  "primary_field": "Name",
+  "fields": [
+    {"name": "Name", "type": "singleLineText", "required": true},
+    {"name": "Email", "type": "email", "required": true},
+    {"name": "Company", "type": "singleLineText", "required": true},
+    {"name": "Summary", "type": "longText", "required": false},
+    {"name": "Google Doc URL", "type": "url", "required": false},
+    {"name": "Created Date", "type": "dateTime", "required": true},
+    {"name": "Status", "type": "singleSelect", "options": ["pending", "processing", "complete", "failed"], "required": true},
+    {"name": "Idempotency Key", "type": "singleLineText", "required": true}
+  ]
+}
