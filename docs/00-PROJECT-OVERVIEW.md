@@ -1,6 +1,6 @@
 # Project Overview
 
-OpsLabs Developer Assessment demonstrates three related automations: contact enrichment and reporting, YouTube metadata collection, and Slack delivery from JSON. The repository supplies runnable local Python components and tenant-neutral Make workflow specifications. Live Google, Airtable, Slack, OpenAI, and Make account setup remains operator-owned.
+OpsLabs Developer Assessment demonstrates three related automations: contact enrichment and reporting, YouTube metadata collection, and Slack delivery from JSON. The repository supplies runnable local Python components and tenant-neutral Make workflow specifications. Task 1 specifies Groq for LLM summaries. Live Google, Airtable, Slack, Groq, and Make account setup remains operator-owned.
 
 ## Outcomes
 

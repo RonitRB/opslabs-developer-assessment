@@ -17,7 +17,7 @@ Create a Slack app, grant `chat:write`, install it, invite it into the private c
 
 ## Make Task 1 and Task 3
 
-Create Airtable fields per `task1_make_automation/airtable_schema.json`; authorize Airtable, OpenAI, Google Docs, and Slack connections. Recreate or map the JSON workflow specifications to current Make modules, test with one record, then set the desired timezone and schedule. Store secrets in Make connections. Activate only after verifying error routes, query filters, channel, and schedule.
+Create Airtable fields per `task1_make_automation/airtable_schema.json`; authorize Airtable, Groq, Google Docs, and Slack connections. Recreate or map the JSON workflow specifications to current Make modules, test with one record, then set the desired timezone and schedule. Store secrets in Make connections. Activate only after verifying error routes, query filters, channel, and schedule. Local tools that need an LLM should set `LLM_PROVIDER=groq` and `GROQ_API_KEY` in `.env`.
 
 ## Operational readiness
 

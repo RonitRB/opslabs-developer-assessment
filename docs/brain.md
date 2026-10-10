@@ -3,9 +3,10 @@
 ## Current status
 
 - Local source, sample payload, environment template, and documentation have been created.
-- Task 2 scraper and Task 3 Flask webhook are implemented but require API keys and have not been exercised against live services.
-- Task 1 and Task 3 Make JSON files are tenant-neutral scenario specifications, not native Make.com exports. They need mapping and validation inside a Make organization.
-- No external services are connected, no live records were created, and no Loom video was recorded.
+- Task 2 scraper is live-verified: 10 YouTube records were fetched to CSV and appended to Google Sheets. Task 3 sample payload was delivered through the configured Slack incoming webhook (HTTP 200).
+- Task 1's Make scenario was reported by the project owner as completing a successful Run once across Airtable, Groq, Google Docs, Airtable update, and Slack. Daily activation/timezone needs confirmation. Task 1 and Task 3 JSON files in the repo remain tenant-neutral specifications, not native Make.com exports.
+- Task 1 uses Groq as its specified LLM provider; `.env.example` names `LLM_PROVIDER=groq` and `GROQ_API_KEY` for local tooling, while Make should hold secrets in managed connections.
+- YouTube/Google Sheets and Task 3 direct incoming-webhook delivery are live-verified. Task 1's successful one-time Make run is owner-reported; scheduled activation/timezone has not been confirmed. Task 3's Make scenario and private-channel destination are not independently verified. No Loom video was recorded.
 
 ## Decisions
 
@@ -23,15 +24,15 @@
 
 ## Next priorities
 
-1. Install dependencies and run local validation.
-2. Provision API access, credentials, Airtable and Google resources.
-3. Import/recreate Make flows, map modules, and perform end-to-end checks.
+1. Create and verify the actual Make scenarios and Airtable/Groq/Google Docs/Slack integrations.
+2. Capture screenshots and record the requested demonstration after those live integrations work.
+3. Commit the implementation files directly into the public GitHub task folders.
 4. Choose production host, TLS/ingress, monitoring, retention, and retry/idempotency policy.
-5. Record the requested demonstration after live integrations work.
 
 ## Known limitations
 
 - No native Make.com scenario export can be generated accurately without a Make tenant and connections.
 - Slack receiver does not persist idempotency keys; retries can post duplicates. Make flows need an idempotency ledger before production.
-- Synthetic name/email/company generation and OpenAI summarization steps are described but require implementation through Make modules.
+- Synthetic name/email/company generation and Groq summarization steps are described but require implementation through Make modules.
+- The public GitHub repository currently has the package archive and top-level docs; its task folders still need implementation files committed directly.
 - Authentication is a shared secret header; a production deployment should prefer signed timestamped requests or gateway authentication and rotation.

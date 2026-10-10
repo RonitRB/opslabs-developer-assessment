@@ -2,7 +2,7 @@ flowchart LR
   subgraph T1[Task 1 · Make.com]
     S[Manual / scheduled trigger] --> C[Generate synthetic contact]
     C --> A[Airtable Contacts]
-    A --> O[OpenAI company summary]
+    A --> O[Groq company summary]
     O --> D[Google Docs report]
     D --> AU[Update Airtable with summary and URL]
     DS[Daily schedule · 07:00 chosen timezone] --> Q[Query completed contacts]

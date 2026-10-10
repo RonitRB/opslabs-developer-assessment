@@ -10,7 +10,7 @@
 
 - YouTube Data API v3 for search and video details.
 - Google Sheets API with service-account access for optional append.
-- Airtable, OpenAI, Google Docs, and Slack via Make.com connections for Task 1.
+- Airtable, Groq, Google Docs, and Slack via Make.com connections for Task 1.
 - Slack Web API `chat.postMessage` in the local Task 3 service.
 
 ## Reliability and security
