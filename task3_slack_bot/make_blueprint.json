@@ -1,0 +1,15 @@
+{
+  "spec_version": "1.0",
+  "artifact_type": "make_scenario_design",
+  "name": "OpsLabs Task 3 Weekly Slack Report",
+  "description": "Tenant-neutral Make.com flow specification; connect a webhook and private Slack channel in the target workspace.",
+  "trigger": {"service": "webhooks", "operation": "custom_webhook", "method": "POST", "content_type": "application/json"},
+  "validation": {"required_fields": {"leads_contacted": "non-negative integer", "replied": "non-negative integer", "meetings_booked": "non-negative integer", "positive_replies": "non-negative integer"}, "reject_invalid": true},
+  "steps": [
+    {"id": "format", "operation": "compose_message", "template": "*Weekly Report*\\n\\nLeads Contacted: {{leads_contacted}}\\nReplies: {{replied}}\\nMeetings Booked: {{meetings_booked}}\\nPositive Replies: {{positive_replies}}"},
+    {"id": "post", "service": "slack", "operation": "post_message", "channel": "CONFIGURE_PRIVATE_CHANNEL", "unfurl_links": false}
+  ],
+  "error_route": {"operation": "return_error_and_notify_operator", "retry": {"max_attempts": 3, "backoff": "exponential"}},
+  "security": {"protect_webhook_url": true, "credentials": "Use Make connections; never embed bot tokens", "require_https": true},
+  "limitations": ["Recreate or remap modules in Make.com; this design file is not a Make.com export.", "If using the Python receiver instead, publish it behind HTTPS and set WEBHOOK_SECRET."]
+}
