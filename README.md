@@ -1,62 +1,31 @@
 # OpsLabs Developer Assessment
 
-A three-part automation assessment covering contact enrichment, YouTube metadata collection, and Slack reporting. The repository is public; the tested source bundle is downloadable at the repository root as `opslabs-developer-assessment.zip`.
+Production-oriented reference implementation for the three assessment workflows: contact enrichment and reporting, YouTube metadata collection, and a Slack incoming webhook.
 
-## Project overview
+## What is included
 
-- **Task 1:** Make.com workflow specification for synthetic contact generation, Airtable storage, OpenAI company summaries, Google Docs reports, and a 07:00 Slack digest.
-- **Task 2:** Python collector using the official YouTube Data API v3, with CSV output and optional Google Sheets append.
-- **Task 3:** Flask webhook that validates weekly metrics and sends them to Slack using an incoming webhook or bot token.
+- `task1_make_automation/`: tenant-neutral Make.com workflow specification using Groq, Airtable schema, and report template. It is not a native Make export.
+- `task2_youtube_scraper/`: validated YouTube Data API v3 scraper, CSV export, optional Google Sheets append, retry/backoff, and CLI.
+- `task3_slack_bot/`: authenticated-by-secret HTTP webhook receiver which validates and formats weekly metrics for Slack.
+- `shared/`: environment configuration and structured logging helpers.
+- `docs/`: project requirements, architecture, schemas, deployment/runbooks, testing plan, decisions, and known limitations.
 
-## Architecture
+## Quick start
 
-```mermaid
-flowchart LR
-  A[Contact trigger] --> B[Generate contact]
-  B --> C[Airtable]
-  C --> D[OpenAI summary]
-  D --> E[Google Docs]
-  E --> F[Daily Slack digest]
-  G[Video URL or keyword] --> H[YouTube Data API]
-  H --> I[CSV and optional Sheets]
-  J[Metrics JSON] --> K[Flask validation]
-  K --> L[Slack delivery]
-```
+1. Python 3.11+ recommended. Create a virtual environment and install `requirements.txt`.
+2. Copy `.env.example` to `.env`; set only the credentials for integrations you will use. Never commit `.env`.
+3. Task 2: `python -m task2_youtube_scraper.scraper --query "python automation" --max-results 10 --csv task2_youtube_scraper/output.csv` (requires `YOUTUBE_API_KEY`). For a video URL, replace `--query` with `--url URL`.
+4. Task 3: `python -m task3_slack_bot.slack_bot` then POST `task3_slack_bot/webhook_example.json` to `http://localhost:8000/webhook/weekly-report` with `X-Webhook-Secret` set to `WEBHOOK_SECRET`.
+5. Task 1: recreate the flow in Make.com using `task1_make_automation/make_blueprint.json` as a specification, then complete the connection-specific configuration steps in its README and `docs/09-AUTOMATION-FLOWS.md`.
 
-Task 1 and the Make path for Task 3 are specifications only; they are not imported or activated Make scenarios. Recreate them in your Make organization and connect its account-specific services before running live workflows.
+## External service setup
 
-## Folder structure
+Task 2 YouTube search and Google Sheets append have been live-verified (10 rows written and read back). Task 3's sample report has been delivered through the configured Slack incoming webhook. The project owner reports a successful Task 1 Make Run once across Airtable, Groq, Google Docs, Airtable update, and Slack; scheduled activation/timezone has not been confirmed here. Task 3's Make scenario and the Slack webhook's private-channel destination have not been independently verified. Configure secrets via environment variables and Make connections, never by embedding credentials in blueprints. Task 1 local LLM configuration uses `LLM_PROVIDER=groq` and `GROQ_API_KEY`; Make scenarios should use Make-managed Groq credentials.
 
-The root package archive expands to `assessment/` with `task1_make_automation/`, `task2_youtube_scraper/`, `task3_slack_bot/`, `shared/`, `tests/`, and `docs/`. It includes the report template, sample CSV, Make specifications, webhook payload, architecture diagram, and documentation.
+## Validation and operational notes
 
-## Setup
+The scraper uses the official YouTube Data API; it does not scrape YouTube HTML. API quota, Google OAuth scopes, Make operation limits, retention, and Slack channel permissions apply. See [docs/13-DEPLOYMENT.md](docs/13-DEPLOYMENT.md) and [docs/12-TESTING.md](docs/12-TESTING.md).
 
-1. Install Python 3.11 or later and create a virtual environment.
-2. Install dependencies with `python -m pip install -r requirements.txt`.
-3. Copy `.env.example` to `.env` and fill only the values needed for the services you configure. Never commit `.env`.
-4. For Make scenarios, store credentials in Make managed connections and follow `task1_make_automation/README.md` plus `docs/13-DEPLOYMENT.md` in the extracted bundle.
+Offline tests: `.venv\Scripts\python.exe -m unittest discover -s tests -v` (10 tests passed on 2026-10-10). These tests validate parsing, CSV formatting, payload validation, and error responses without live credentials. Live checks are documented separately in `docs/12-TESTING.md`.
 
-## Environment variables
-
-`YOUTUBE_API_KEY`, `GOOGLE_SERVICE_ACCOUNT_JSON` (path to service-account JSON), `GOOGLE_SHEETS_SPREADSHEET_ID`, `GOOGLE_SHEETS_WORKSHEET`, `WEBHOOK_SECRET`, and either `SLACK_WEBHOOK_URL` or `SLACK_BOT_TOKEN` plus `SLACK_CHANNEL_ID`. Airtable and OpenAI credentials are placeholders for Make-managed connections; do not put secrets in a blueprint.
-
-## How to run
-
-From the extracted project root:
-
-```sh
-python -m task2_youtube_scraper.scraper --query "python automation" --max-results 10 --csv task2_youtube_scraper/output.csv
-python -m task2_youtube_scraper.scraper --url "https://youtu.be/VIDEO_ID" --csv task2_youtube_scraper/output.csv
-python -m task3_slack_bot.slack_bot
-python -m unittest discover -s tests -v
-```
-
-Task 2 needs a YouTube API key. Task 3 needs a webhook secret and Slack delivery configuration. Eight offline tests cover validation and mocked delivery; they do not verify third-party services.
-
-## Screenshots and Loom
-
-Screenshots of live Make runs and service outputs are pending account configuration. The Loom walkthrough has not yet been recorded. Do not treat the sample CSV as live API data.
-
-## GitHub
-
-Public repository: [github.com/RonitRB/opslabs-developer-assessment](https://github.com/RonitRB/opslabs-developer-assessment)
+Architecture: [docs/architecture.mmd](docs/architecture.mmd). Screenshots and Loom recording remain outstanding.
