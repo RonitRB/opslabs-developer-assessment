@@ -16,4 +16,5 @@
 - Verified a live 10-video YouTube search, CSV output, and 10-row Google Sheets append/read-back.
 - Verified Task 3 sample weekly report delivery through the configured Slack incoming webhook (HTTP 200); Make.com scenario execution and private-channel destination remain unverified.
 - Recorded the project owner's report that Task 1's Make scenario completed a successful Run once across all five configured service steps; scheduled activation and timezone remain to confirm.
+- Added the user-provided native Task 1 Make blueprint; confirmed its five workflow modules and checked that it contains no API key or Slack webhook credential.
 - Redacted request URLs from YouTube network errors and reported the Sheets append row count.

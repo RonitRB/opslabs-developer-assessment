@@ -4,7 +4,7 @@
 
 - Local source, sample payload, environment template, and documentation have been created.
 - Task 2 scraper is live-verified: 10 YouTube records were fetched to CSV and appended to Google Sheets. Task 3 sample payload was delivered through the configured Slack incoming webhook (HTTP 200).
-- Task 1's Make scenario was reported by the project owner as completing a successful Run once across Airtable, Groq, Google Docs, Airtable update, and Slack. Daily activation/timezone needs confirmation. Task 1 and Task 3 JSON files in the repo remain tenant-neutral specifications, not native Make.com exports.
+- Task 1's actual Make export is now included. The project owner reported a successful Run once across Airtable, Groq, Google Docs, Airtable update, and Slack. Daily activation/timezone needs confirmation. Task 3's JSON remains a tenant-neutral specification, not a native Make export.
 - Task 1 uses Groq as its specified LLM provider; `.env.example` names `LLM_PROVIDER=groq` and `GROQ_API_KEY` for local tooling, while Make should hold secrets in managed connections.
 - YouTube/Google Sheets and Task 3 direct incoming-webhook delivery are live-verified. Task 1's successful one-time Make run is owner-reported; scheduled activation/timezone has not been confirmed. Task 3's Make scenario and private-channel destination are not independently verified. No Loom video was recorded.
 
@@ -31,7 +31,7 @@
 
 ## Known limitations
 
-- No native Make.com scenario export can be generated accurately without a Make tenant and connections.
+- Task 3's Make JSON is a design specification; only Task 1's actual export is included. Remap account-specific connections and resource IDs before importing the Task 1 blueprint elsewhere.
 - Slack receiver does not persist idempotency keys; retries can post duplicates. Make flows need an idempotency ledger before production.
 - Synthetic name/email/company generation and Groq summarization steps are described but require implementation through Make modules.
 - The public GitHub repository currently has the package archive and top-level docs; its task folders still need implementation files committed directly.
